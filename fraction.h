@@ -19,11 +19,4 @@
 //    //output
 //    void output();
 // };
-
-
-
-
-
-
-
 // #endif

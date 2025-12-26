@@ -11,6 +11,7 @@ class fraction{
    fraction(int num,int de);
 
    int GCD(int gc,int cd);
+   void simple();
    
    //accesors
    int getNumerator();
@@ -26,6 +27,36 @@ class fraction{
    
 };
 
+int fraction::GCD(int gc,int cd){
+   gc=num;
+   cd=de;
+   if (cd<0){
+    cd=-cd;
+   }
+   if (gc<0)
+   {
+      gc=-gc;
+   }
+   
+   while(cd!=0){
+   int temp=cd;
+   cd=gc%cd;
+   gc=temp;
+   }
+return gc;
+}
+
+void fraction::simple(){
+   if(de==0)return;
+   if(de<0){
+      num = -num;
+      de = -de;
+   }
+   int divide= GCD(num,de);
+   num/=divide;
+   de/=divide;
+}
+
 fraction::fraction(){
     num=0;
     de=1;
@@ -35,14 +66,17 @@ fraction::fraction(){
 fraction::fraction(int n,int d){
     num=n;
     de=d;
+    simple();
 }
 
 void fraction::setNumerator(int n){
-     num=n; 
+     num=n;
+     simple(); 
 }
 
 void fraction::setDenomirator(int d){
      de=d; 
+     simple();
 }
 
 int fraction::getNumerator(){
@@ -52,18 +86,7 @@ int fraction::getNumerator(){
 int fraction::getDenominator(){
    return de;  
 }
-
-int fraction::GCD(int num,int de){
-   if (de<0){
-    de=-de;
-   }
-   while(de!=0){
-   int temp=de;
-   de=num%temp;
-   num=temp;
-   }
-   }
-
+   
 void fraction::output(){
     cout<<num<<"/"<<de;
 }
