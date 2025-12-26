@@ -57,10 +57,12 @@ int fraction::GCD(int num,int de){
    if (de<0){
     de=-de;
    }
+   while(de!=0){
    int temp=de;
    de=num%temp;
    num=temp;
-}
+   }
+   }
 
 void fraction::output(){
     cout<<num<<"/"<<de;
