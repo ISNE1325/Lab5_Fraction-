@@ -37,7 +37,7 @@ int fraction::GCD(int gc,int cd){
    {
       gc=-gc;
    }
-   
+
    while(cd!=0){
    int temp=cd;
    cd=gc%cd;
@@ -55,6 +55,7 @@ void fraction::simple(){
    int divide= GCD(num,de);
    num/=divide;
    de/=divide;
+   
 }
 
 fraction::fraction(){
