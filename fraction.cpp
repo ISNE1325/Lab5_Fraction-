@@ -22,18 +22,18 @@ class fraction{
    void setDenomirator(int d);
 
    //process
-   int plus(const fraction& f);
-   int minus(const fraction& f);
-   int multiple(const fraction& f);
-   int divide(const fraction& f);
+   fraction plus( fraction& f);
+   fraction minus( fraction& f);
+   fraction multiple( fraction& f);
+   fraction divide( fraction& f);
 
    //comparison
-   bool equal(const fraction& f);
-   bool notequal(const fraction& f);
-   bool less(const fraction& f);
-   bool more(const fraction& f);
-   bool lessequal(const fraction& f);
-   bool moreequal(const fraction& f);
+   bool equal( fraction& f);
+   bool notequal( fraction& f);
+   bool less( fraction& f);
+   bool more( fraction& f);
+   bool lessequal( fraction& f);
+   bool moreequal( fraction& f);
 
    //output
    void output();
@@ -103,11 +103,85 @@ int fraction::getNumerator(){
 int fraction::getDenominator(){
    return de;  
 }
+
+fraction fraction::plus( fraction& f){
+   int a=num*f.getDenominator()+de*f.getNumerator();
+   int b=f.getDenominator()*de;
    
-void fraction::output(){
-    cout<<num<<"/"<<de;
+    return fraction(a,b);
+} 
 
+fraction fraction::minus( fraction& f){
+   int a=num*f.getDenominator()-de*f.getNumerator();
+   int b=f.getDenominator()*de;
+   
+    return fraction(a,b);
+} 
+fraction fraction::multiple(fraction&f){
+   int a =num*f.getNumerator();
+   int b= de*f.getDenominator();
 
+   return fraction(a,b);
+}
+fraction fraction::divide(fraction&f){
+   int a =num*f.getDenominator();
+   int b=de*f.getNumerator();
+
+   return fraction(a,b);
+}
+
+//comparison
+bool fraction::equal(fraction&f){
+   if(num==f.getNumerator()&&de==f.getDenominator()){
+      return true;
+   }else{
+      return false;
+   }
+   
+}
+
+bool fraction::notequal(fraction&f){
+   if(num!=f.getNumerator()&&de!=f.getDenominator()){
+   return true;}
+   else{
+      return false;
+   }
+}
+
+bool fraction::less(fraction&f){
+ if(num*f.getDenominator()<de*f.getNumerator()){
+      return true;
+ }else{
+   return false;
+ }
 
 }
+
+bool fraction::lessequal(fraction&f){
+   if(num*f.getDenominator()<=de*f.getNumerator()){
+      return true;
+   }
+   else{
+      return true;
+   }
+}
+
+bool fraction::more(fraction&f){
+   if(num*f.getDenominator()>de*f.getNumerator()){
+      return true;
+   }else{
+      return false;
+   }
+   
+}
+
+bool fraction::moreequal(fraction&f){
+   if(num*f.getDenominator()>=de*f.getNumerator()){
+   return true;}else{
+      return false;
+   }
+}
+
+void fraction::output(){
+    cout<<num<<"/"<<de;
 }

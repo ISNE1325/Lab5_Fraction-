@@ -6,6 +6,7 @@ int main(){
     fraction f2(3,4);
     f1.output();
     f2.output();
+
     
 return 0;
 
