@@ -26,6 +26,8 @@ class fraction{
    fraction minus( fraction& f);
    fraction multiple( fraction& f);
    fraction divide( fraction& f);
+   fraction plus2();   
+   fraction minus2();        
 
    //comparison
    bool equal( fraction& f);
@@ -130,6 +132,17 @@ fraction fraction::divide(fraction&f){
    return fraction(a,b);
 }
 
+fraction fraction::plus2(){
+   int a = num+de;
+   int b = de;
+   return fraction(a,b);
+}
+
+fraction fraction::minus2(){
+   int a = num-de;
+   int b =de;
+   return fraction(a,b);
+}
 //comparison
 bool fraction::equal(fraction&f){
    if(num==f.getNumerator()&&de==f.getDenominator()){

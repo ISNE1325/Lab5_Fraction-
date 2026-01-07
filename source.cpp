@@ -32,7 +32,28 @@ int main(){
     cout << "f1 / f2 = ";
     w.output();
     cout << endl;
+
+    fraction d=f1.plus2();
+    cout<<"++f1 = ";
+    d.output();
+    cout<<endl;
+
+    fraction e=f2.plus2();
+    cout<<"++f2 = ";
+    e.output();
+    cout<<endl;
     
+    fraction g=f1.minus2();
+    cout<<"--f1 = ";
+    g.output();
+    cout<<endl;
+
+    fraction h=f2.minus2();
+    cout<<"--f2 = ";
+    h.output();
+    cout<<endl;
+
+    //*****************comparison
     cout << "f1 == f2 : " ;
     if(f1.equal(f2)){
         cout<<"TRUE";
