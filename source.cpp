@@ -32,13 +32,55 @@ int main(){
     cout << "f1 / f2 = ";
     w.output();
     cout << endl;
+    
+    cout << "f1 == f2 : " ;
+    if(f1.equal(f2)){
+        cout<<"TRUE";
+    }else{
+        cout<<"FALSE";
+    }
+    cout<<endl;
 
-    cout << "f1 == f2 : " << f1.equal(f2) << endl;
-    cout << "f1 != f2 : " << f1.notequal(f2) << endl;
-    cout << "f1 <  f2 : " << f1.less(f2) << endl;
-    cout << "f1 <= f2 : " << f1.lessequal(f2) << endl;
-    cout << "f1 >  f2 : " << f1.more(f2) << endl;
-    cout << "f1 >= f2 : " << f1.moreequal(f2) << endl;
+    cout << "f1 != f2 : " ;
+    if(f1.notequal(f2)){
+        cout<<"TRUE";
+    }else{
+        cout<<"FALSE";
+    }
+    cout<<endl;
+    
+    cout << "f1 <  f2 : " ;    
+    if(f1.less(f2)){
+        cout<<"TRUE";
+    }else{
+        cout<<"FALSE";
+    }
+    cout<<endl;
+    
+    cout << "f1 <= f2 : " ;
+    if(f1.lessequal(f2)){
+        cout<<"TRUE";
+    }else{
+        cout<<"FALSE";
+    }
+    cout<<endl;
+    
+    cout << "f1 >  f2 : ";
+    if(f1.more(f2)){
+        cout<<"TRUE";
+    }else{
+        cout<<"FALSE";
+    }
+    cout<<endl;
+    
+    cout << "f1 >= f2 : ";
+    if(f1.moreequal(f2)){
+        cout<<"TRUE";
+    }else{
+        cout<<"FALSE";
+    }
+    cout<<endl;
+    
 
 return 0;
 
