@@ -133,52 +133,52 @@ fraction fraction::divide(fraction&f){
 //comparison
 bool fraction::equal(fraction&f){
    if(num==f.getNumerator()&&de==f.getDenominator()){
-      return true;
+      cout<<" equal to ";
    }else{
-      return false;
+      cout<<" not equal to ";
    }
    
 }
 
 bool fraction::notequal(fraction&f){
    if(num!=f.getNumerator()&&de!=f.getDenominator()){
-   return true;}
+   cout<<" not equal to ";}
    else{
-      return false;
+      cout<<" equal to ";
    }
+
 }
 
 bool fraction::less(fraction&f){
  if(num*f.getDenominator()<de*f.getNumerator()){
-      return true;
- }else{
-   return false;
+      cout<<" less than ";}
+      else{
+         cout<<" not less than ";
+      }
  }
-
-}
 
 bool fraction::lessequal(fraction&f){
    if(num*f.getDenominator()<=de*f.getNumerator()){
-      return true;
+      cout<<" equal or less than ";
+   }else{
+      cout<<" not equal or less than ";
    }
-   else{
-      return true;
-   }
+
 }
 
 bool fraction::more(fraction&f){
    if(num*f.getDenominator()>de*f.getNumerator()){
-      return true;
+      cout<<" more than ";
    }else{
-      return false;
+      cout<<" not more than ";
    }
    
 }
 
 bool fraction::moreequal(fraction&f){
    if(num*f.getDenominator()>=de*f.getNumerator()){
-   return true;}else{
-      return false;
+   cout<<"equal or more than ";}else{
+      cout<<"not equal or more than ";
    }
 }
 
